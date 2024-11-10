@@ -5,8 +5,8 @@ import json
 
 # Hard-coded usernames, passwords, and client IDs
 user_data = {
-    "Willem Sytsma": {"password": "walkwalkwalk", "client_id": "000000000000000"},
-    "Admin": {"password": "Spyagent3865", "client_id": "999999999999999"}  # Admin user added
+    "Willem Sytsma": {"password": "*********", "client_id": "**********"},
+    "Admin": {"password": "******", "client_id": "*********"}  # Admin user added
 }
 
 
