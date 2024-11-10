@@ -310,7 +310,7 @@ def admin_dashboard(request):
 
 
     # Check if the logged-in user is the admin
-    admin_user = next((u for u in users if u.client_id == "999999999999999"), None)
+    admin_user = next((u for u in users if u.client_id == "*****"), None)
     if not admin_user or client_id != admin_user.client_id:
         return redirect('login')  # Redirect to login if not the admin
 
