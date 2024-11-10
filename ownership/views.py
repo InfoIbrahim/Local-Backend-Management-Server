@@ -6,8 +6,6 @@ import json
 # Hard-coded usernames, passwords, and client IDs
 user_data = {
     "Willem Sytsma": {"password": "walkwalkwalk", "client_id": "000000000000000"},
-    "Mariyeh Saeidi": {"password": "willsbaby", "client_id": "000000000000001"},
-    "Norma Graham": {"password": "willsmom", "client_id": "000000000000002"},
     "Admin": {"password": "Spyagent3865", "client_id": "999999999999999"}  # Admin user added
 }
 
