@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Interactive Web Terminal{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/terminal.css' %}"> <!-- Update this path as needed -->
+{% endblock %}
+
+{% block additional_js %}
+<script src="{% static 'js/terminal.js' %}"></script> <!-- Update this path as needed -->
+{% endblock %}
+
+{% block content %}
+    <div id="terminal">
+        <h1>Interactive Web Terminal</h1>
+        {% block terminal_content %}{% endblock %}
+    </div>
+
+    <!-- Form to submit terminal commands -->
+    <form method="POST" action="{% block form_action %}{% endblock %}">
+        {% csrf_token %}
+        <input type="text" name="command" placeholder="Type your command..." autofocus required />
+        <button type="submit" style="display: none;"></button>
+    </form>
+{% endblock %}

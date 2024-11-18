@@ -25,12 +25,18 @@ SECRET_KEY = 'django-insecure-p21nsz#w@#7hq@w-2&9)&8v8-l+0yc)q2l9w_9eo!&!p%f7z6m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-# settings.py
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Prints emails to the console
-DEFAULT_FROM_EMAIL = 'no-reply@infoibrahim.com'  # Sender's email
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.0.105', #565 Chablis Computer
+    '192.168.0.103', #565 Chablis Phone W
+    '192.168.0.97', #565 Chablis Phone M
+    '10.101.1.203', #GoBus
+    '10.101.1.204', #GoBus Computer
+    '10.0.0.121', #Brampton Rental Computer
+    '10.0.0.247', #Brampton Rental Phone
+    'infoibrahim.com',
+]
 
 # Application definition
 
@@ -40,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'ownership',  # Add your app here
+    'ownership',
+    'django.contrib.staticfiles',  # Add your app here
 ]
 
 MIDDLEWARE = [
@@ -55,10 +62,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myproject.urls'
 
+import os
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +135,13 @@ LOGIN_URL = '/login/'
 LOGOUT_REDIRECT_URL = 'login'  # This assumes you have a login view defined with the name 'login'
 
 
+# settings.py
+
+STATIC_URL = '/static/'
+
+# Add the path to your static files directory (usually within your project's root directory)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # or a similar directory name

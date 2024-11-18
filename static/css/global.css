@@ -1,0 +1,39 @@
+/* global.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf5; /* Nice off-white */
+    color: #000000; /* Black text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Common button styles */
+button {
+    background-color: #d4af37; /* Rich gold */
+    color: #000000; /* Black text for contrast */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em; /* Ensure button text is legible */
+    border-radius: 5px; /* Smooth edges for a modern look */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+    background-color: #b38b29; /* Darker gold for hover effect */
+}
+
+/* Shared layout classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+}

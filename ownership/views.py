@@ -138,13 +138,13 @@ def dashboard(request):
     if request.method == "POST":
         command = request.POST.get('command', '').strip()
 
-        if command == "logout":
+        if command == "Logout":
             user.log_out()
             request.session.flush()
             terminal_output = "Logged out successfully."
             return redirect('login')
 
-        elif command == "balance":
+        elif command == "Balance":
             # Ensure IHB_number is provided and valid
             try:
                 IHB_number = int(request.POST.get('IHB_number', 1))  # Default to IHB 1 if not provided
@@ -152,7 +152,7 @@ def dashboard(request):
             except ValueError:
                 terminal_output = "Invalid IHB number provided."
 
-        elif command == "transfer":
+        elif command == "Transfer":
             recipient_name = request.POST.get('recipient')
             IHB_number = request.POST.get('IHB_number')
             amount = request.POST.get('amount')

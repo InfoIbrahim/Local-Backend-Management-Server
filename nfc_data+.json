@@ -1,25 +1,86 @@
 [
     {
         "uid": "04 60 A8 8F DF 61 80",
-        "timestamp": "2024-11-09 17:56:08",
+        "timestamp": "2024-11-10 21:57:24",
         "IHB_number": 1
     },
     {
-        "uid": "5A 6E C0 5F",
-        "timestamp": "2024-11-09 18:27:16",
-        "IHB_number": 2
-    },
-    {
-        "uid": "45 E5 BF 5F",
-        "timestamp": "2024-11-09 18:27:38",
-        "IHB_number": 3,
+        "uid": "8B AB BF 5F",
+        "timestamp": "2024-11-10 21:59:04",
+        "IHB_number": 2,
         "ownership_data": [
             {
-                "client_id": "000000000000002",
-                "IHB_number": 3,
-                "percentage": 100
+                "client_id": "000000000000000",
+                "IHB_number": 2,
+                "percentage": 0.004
+            },
+            {
+                "client_id": "000000000000001",
+                "IHB_number": 2,
+                "percentage": 99.996
             }
         ],
-        "transaction_history": []
+        "transaction_history": [
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 100000,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000000",
+                "recipient": "000000000000001",
+                "amount": 100000,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000000",
+                "recipient": "000000000000001",
+                "amount": 1,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 1,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 2,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 100000,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000000",
+                "recipient": "000000000000001",
+                "amount": 100000,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000000",
+                "recipient": "000000000000001",
+                "amount": 1,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 1,
+                "IHB_number": 2
+            },
+            {
+                "sender": "000000000000001",
+                "recipient": "000000000000000",
+                "amount": 2,
+                "IHB_number": 2
+            }
+        ]
     }
 ]

@@ -1,0 +1,32 @@
+/* dashboard.css */
+.dashboard {
+    background-color: #fdfaf5; /* Off-white background */
+    color: #000000; /* Black text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height for centering */
+    box-sizing: border-box;
+}
+
+.dashboard-header {
+    color: #d4af37; /* Rich gold for header accents */
+    font-size: 1.8em; /* Emphasized font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Increased spacing */
+    text-align: center; /* Centers the header text */
+}
+
+.dashboard-item {
+    background-color: #ffffff; /* White background for individual items */
+    border: 1px solid #d4af37; /* Gold border for styling */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Slightly larger border radius for a modern look */
+    width: 90%; /* Responsive width to keep items centered */
+    max-width: 600px; /* Limit width for readability on larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Centers text within each item */
+}

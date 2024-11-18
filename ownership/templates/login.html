@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- Direct link to external CSS file -->
-    <link rel="stylesheet" href="/path/to/your/css/login.css"> <!-- Replace with actual path -->
-</head>
-<body>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block additional_js %}
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock %}
+
+{% block content %}
     <div class="container">
         <h1>Login</h1>
 
@@ -30,8 +33,4 @@
             <button type="submit">Log in</button>
         </form>
     </div>
-
-    <!-- Direct link to external JS file -->
-    <script src="/path/to/your/js/login.js"></script> <!-- Replace with actual path -->
-</body>
-</html>
+{% endblock %}

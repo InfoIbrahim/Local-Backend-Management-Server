@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
-    <!-- Direct path to the CSS file -->
-    <link rel="stylesheet" href="/path/to/your/css/dashboard.css"> <!-- Replace this with the actual path -->
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block additional_js %}
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
     <h1>Welcome, {{ user.name }}</h1>
 
     <p><strong>Your IHB Ownership</strong></p>
@@ -30,26 +34,31 @@
         <label for="IHB_number">IHB Number:</label>
         <input type="number" id="IHB_number" name="IHB_number" required><br><br>
 
-        <label for="command">Enter Command (balance / transfer / logout):</label>
+        <label for="command">Enter Command (Balance / Transfer / Logout):</label>
         <input type="text" id="command" name="command" required><br><br>
 
         <button type="submit">Execute Command</button>
     </form>
 
-    <!-- Transfer Form Section -->
     <h2>Transfer Ownership</h2>
     <form method="post">
         {% csrf_token %}
-        <label for="recipient">Recipient:</label>
+        <label for="recipient">Recipient (First Name and Last Name):</label>
         <input type="text" id="recipient" name="recipient" value="{{ transfer_form_data.recipient }}" required><br><br>
 
-        <label for="IHB_number">IHB Number:</label>
+        <label for="IHB_number">IHB Number (For Transaction):</label>
         <input type="number" id="IHB_number" name="IHB_number" value="{{ transfer_form_data.IHB_number }}" required><br><br>
 
-        <label for="amount">Amount (USD):</label>
+        <label for="amount">Amount (Real Number as USD):</label>
         <input type="number" id="amount" name="amount" value="{{ transfer_form_data.amount }}" required><br><br>
 
         <button type="submit" name="command" value="transfer">Transfer</button>
+    </form>
+    
+    <h3>On Demand Support</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="Phone Number">(250)-886-1590:</label>
     </form>
 
     {% if terminal_output %}
@@ -58,8 +67,4 @@
     
     <br>
     <a href="{% url 'logout' %}">Logout</a>
-
-    <!-- Direct path to the JavaScript file -->
-    <script src="/path/to/your/js/dashboard.js"></script> <!-- Replace this with the actual path -->
-</body>
-</html>
+{% endblock %}

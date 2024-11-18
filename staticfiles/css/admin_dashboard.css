@@ -1,0 +1,20 @@
+/* admin_dashboard.css */
+.admin-dashboard {
+    background-color: #fdfaf5; /* Off-white background */
+    color: #000000; /* Black text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensures padding doesn’t add to total width */
+}
+
+.admin-dashboard-header {
+    color: #d4af37; /* Rich gold for header accents */
+    font-weight: bold;
+    font-size: 1.8em; /* Slightly larger header font for emphasis */
+    margin-bottom: 15px;
+    text-align: center; /* Centers the header text */
+}
