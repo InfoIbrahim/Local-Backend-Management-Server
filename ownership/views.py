@@ -5,10 +5,8 @@ import json
 
 # Hard-coded usernames, passwords, and client IDs
 user_data = {
-    "Willem Sytsma": {"password": "walkwalkwalk", "client_id": "000000000000000"},
-    "Mariyeh Saeidi": {"password": "willsbaby", "client_id": "000000000000001"},
-    "Norma Graham": {"password": "willsmom", "client_id": "000000000000002"},
-    "Admin": {"password": "Spyagent3865", "client_id": "999999999999999"}  # Admin user added
+    "Willem Sytsma": {"password": "*********", "client_id": "**********"},
+    "Admin": {"password": "******", "client_id": "*********"}  # Admin user added
 }
 
 
@@ -312,7 +310,7 @@ def admin_dashboard(request):
 
 
     # Check if the logged-in user is the admin
-    admin_user = next((u for u in users if u.client_id == "999999999999999"), None)
+    admin_user = next((u for u in users if u.client_id == "*****"), None)
     if not admin_user or client_id != admin_user.client_id:
         return redirect('login')  # Redirect to login if not the admin
 
@@ -399,11 +397,3 @@ def ledger_view(request):
 
 
 
-#must be consolidated: USD to Gold Fluctuation, active data file(json)
-#USD to Gold fluctuation:
-# userbuys IHB at market price
-# physical commodity asset is acquired
-# exiting terms assuming one would exit when market gold volatility > 100% of client purchase price
-# Ibrahim takes 5% as exit fee from 100% of the volatility increase
-# Example:
-# volatility increase is 2% from $100,000 USD purchase price, $2000USD capital gain - 10% Ibrahim Exit Fee = $1800.00 USD capital gain ++ $200.00 USD Ibrahim exit fee
