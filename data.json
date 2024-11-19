@@ -10,7 +10,7 @@
             "IHB_ownership": [
                 {
                     "IHB_number": 1,
-                    "percentage": 100.0
+                    "percentage": 99.999
                 },
                 {
                     "IHB_number": 2,
@@ -160,6 +160,24 @@
                     "sender": "000000000000002",
                     "recipient": "000000000000000",
                     "amount": 333.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000000",
+                    "recipient": "000000000000001",
+                    "amount": 1033.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000001",
+                    "recipient": "000000000000000",
+                    "amount": 446.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000002",
+                    "recipient": "000000000000000",
+                    "amount": 586.0,
                     "IHB_number": 1
                 }
             ]
@@ -173,7 +191,7 @@
                 },
                 {
                     "IHB_number": 1,
-                    "percentage": 0.0
+                    "percentage": 1.1102230246251565e-16
                 }
             ],
             "transaction_history": [
@@ -320,6 +338,24 @@
                     "recipient": "000000000000002",
                     "amount": 333.0,
                     "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000000",
+                    "recipient": "000000000000001",
+                    "amount": 1033.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000001",
+                    "recipient": "000000000000002",
+                    "amount": 587.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000001",
+                    "recipient": "000000000000000",
+                    "amount": 446.0,
+                    "IHB_number": 1
                 }
             ]
         },
@@ -332,7 +368,7 @@
                 },
                 {
                     "IHB_number": 1,
-                    "percentage": 0.0
+                    "percentage": 0.0010000000000000009
                 }
             ],
             "transaction_history": [
@@ -370,6 +406,18 @@
                     "sender": "000000000000002",
                     "recipient": "000000000000000",
                     "amount": 333.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000001",
+                    "recipient": "000000000000002",
+                    "amount": 587.0,
+                    "IHB_number": 1
+                },
+                {
+                    "sender": "000000000000002",
+                    "recipient": "000000000000000",
+                    "amount": 586.0,
                     "IHB_number": 1
                 }
             ]
