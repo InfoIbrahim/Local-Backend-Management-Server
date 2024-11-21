@@ -399,11 +399,3 @@ def ledger_view(request):
 
 
 
-#must be consolidated: USD to Gold Fluctuation, active data file(json)
-#USD to Gold fluctuation:
-# userbuys IHB at market price
-# physical commodity asset is acquired
-# exiting terms assuming one would exit when market gold volatility > 100% of client purchase price
-# Ibrahim takes 5% as exit fee from 100% of the volatility increase
-# Example:
-# volatility increase is 2% from $100,000 USD purchase price, $2000USD capital gain - 10% Ibrahim Exit Fee = $1800.00 USD capital gain ++ $200.00 USD Ibrahim exit fee
